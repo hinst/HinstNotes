@@ -9,4 +9,5 @@ public class HinstNotesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HinstNotesApplication.class, args);
 	}
+	
 }
