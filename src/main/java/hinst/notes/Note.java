@@ -7,14 +7,14 @@ import javax.persistence.Id;
 @Entity
 class Note {
 	
-	public Note() {
-		super();
-	}
-
 	@Id
 	@GeneratedValue
 	private Long id;
 	private String text;
+
+	public Note() {
+		super();
+	}
 
 	public Long getId() {
 		return id;
