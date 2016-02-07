@@ -1,6 +1,7 @@
 package hinst.notes;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,9 +13,9 @@ class NoteExposer {
 	@Autowired
 	NoteRepository noteRepository;
 	
-	@RequestMapping("/notes")
-	Collection<Note> getNotes() {
-		return noteRepository.findAll();
+	@RequestMapping("/notes/count")
+	Long getNotes() {
+		return noteRepository.count();
 	}
 
 }
